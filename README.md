@@ -1,4 +1,4 @@
-# Envo2yEmoncms
+# Envoy2Emoncms
 
 install emoncms on a sever for example a raspberry pi
 
