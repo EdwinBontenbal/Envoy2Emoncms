@@ -60,3 +60,10 @@ add
         compress
 }
 ```
+
+Now change the settings in the file DSMR2Emoncms.py
+``` sh
+vi /etc/DSMR2Emoncms/DSMR2Emoncms.cfg
+privateKey = <YOUR APIKEY OF EMONCMS INSTANCE> 
+emon_host  = <YOUR IP OF EMONCMS INSTANCE>
+```
