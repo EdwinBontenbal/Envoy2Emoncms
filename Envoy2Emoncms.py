@@ -33,7 +33,7 @@ logging.basicConfig(filename=LogFile,format='%(asctime)s %(message)s',level=logg
 ###############################################################################################################
 
 Config = ConfigParser.ConfigParser()
-Config.read("Envoy2Emoncms.cfg")
+Config.read("/etc/Envoy2Emoncms/Envoy2Emoncms.cfg")
 
 def ConfigSectionMap(section):
     dict1 = {}
