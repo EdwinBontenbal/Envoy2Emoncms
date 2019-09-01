@@ -1,4 +1,4 @@
-#This utility send a envoy (enphase) data to emoncms
+#This utility sends envoy (enphase) data to emoncms
 #  
 # coded by:
 # auteur : Edwin Bontenbal
@@ -6,7 +6,7 @@
 version = "v1.00"
 
 
-# if errors during executing this scrip make sure you installed phyton and the required modules/libraries
+# if errors during executing this script make sure you installed phyton and the required modules/libraries
 import ConfigParser
 import datetime
 import logging
