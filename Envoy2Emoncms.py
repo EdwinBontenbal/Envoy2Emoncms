@@ -1,4 +1,4 @@
-#This utility sends envoy (enphase) data to emoncms
+# This utility sends envoy (enphase) data to emoncms
 #  
 # coded by:
 # author : Edwin Bontenbal
@@ -6,7 +6,7 @@
 version = "v1.00"
 
 
-# if you experience errors while executing this script, make sure you installed phython and the required modules/libraries
+# If you experience errors while executing this script, make sure you installed python and the required modules/libraries
 import ConfigParser
 import datetime
 import logging
@@ -146,7 +146,7 @@ while True:
    logging.debug("lastReportWatts : " + str(data_inv[x]['lastReportWatts']))
  
    if      (data_inv[x]['lastReportDate'] > TimeStampList[data_inv[x]['serialNumber']])  and (data_inv[x]['lastReportWatts']>0):
-    # string contains a newer report  
+    # String contains a newer report  
     logging.debug("Update, newer timestamp found")
     DataJson_inv[PanelID + '_LRW'] = data_inv[x]['lastReportWatts']
     DataJson_inv[PanelID + '_MRW'] = data_inv[x]['maxReportWatts']
