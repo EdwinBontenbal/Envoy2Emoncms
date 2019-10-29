@@ -1,12 +1,12 @@
 #This utility sends envoy (enphase) data to emoncms
 #  
 # coded by:
-# auteur : Edwin Bontenbal
+# author : Edwin Bontenbal
 # Email : Edwin.Bontenbal@Gmail.COM 
 version = "v1.00"
 
 
-# if errors during executing this script make sure you installed phyton and the required modules/libraries
+# if you experience errors while executing this script, make sure you installed phython and the required modules/libraries
 import ConfigParser
 import datetime
 import logging
@@ -119,7 +119,7 @@ while True:
  for x in range(len(data_inv)):
    # Check if Inverter Device is in dictionary list
    if TimeStampList.has_key(data_inv[x]['serialNumber']):
-     # TimeStampAlready in list 
+     # Time Stamp Already in list 
      logging.debug(data_inv[x]['serialNumber'] + " - not add serialnumber to list")
    else: 
      # Time Stamp Not In List
@@ -129,7 +129,7 @@ while True:
  DataJson_inv.clear()
  DataJson_sum.clear()
 
- # Determine panel and array according translationlist, based on naming 
+ # Determine panel and array according to translation list, based on naming 
  for x in range(len(data_inv)):
    if TranslationList.has_key(data_inv[x]['serialNumber']):
      # Serial in list use alias 
@@ -154,7 +154,7 @@ while True:
     logging.debug("Update time inverter : " + str(data_inv[x]['lastReportDate']) + "  LastKnowUpdate : " + str(TimeStampList[data_inv[x]['serialNumber']]))
     TimeStampList[data_inv[x]['serialNumber']]     = data_inv[x]['lastReportDate']
    elif    (data_inv[x]['lastReportDate'] == TimeStampList[data_inv[x]['serialNumber']]) and data_sum['wattsNow'] == 0:
-    # ince more than 300 sec no new data recieved, this means inverts are off 
+    # Since more than 300 sec and no new data recieved, this means inverts are off 
     logging.debug("stop, set everything to zero, no new data comming in")
     DataJson_inv[PanelID + '_LRW'] = 0 
     DataJson_inv[PanelID + '_MRW'] = data_inv[x]['maxReportWatts']
