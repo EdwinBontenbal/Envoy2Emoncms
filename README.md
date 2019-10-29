@@ -28,7 +28,7 @@ cp Envoy2EmoncmsWatchdog.sh /usr/local/bin/Envoy2EmoncmsWatchdog.sh
 
 mkdir /etc/Envoy2Emoncms
 cp Envoy2Emoncms_default.cfg /etc/Envoy2Emoncms/Envoy2Emoncms.cfg 
-vi /etc/Envoy2Emoncms/Envoy2Emoncms_default.cfg
+vi /etc/Envoy2Emoncms/Envoy2Emoncms.cfg
 - change alle options marked <.....> 
 - add translation list if you want to translate your serial numbers to human readable names 
   [translationlist]
